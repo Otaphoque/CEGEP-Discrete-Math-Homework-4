@@ -1,23 +1,17 @@
 package truc;
 
-import java.util.Scanner;
-
 public class Question1 {
 
     public Question1() {
     }
 
     public int EuclidGCD(int number1, int number2) {
-        int small, big;
-        if (number1 < number2) {
-            small = number1;
-            big = number2;
-        } else if (number1 > number2) {
-            small = number2;
-            big = number1;
-        } else {
-            return number1;
+        if (number1 == 0) {
+            return number2;
         }
-        return 0;
+        return EuclidGCD(number2 % number1, number1);
     }
 }
+
+// À ENLEVER AVANT DE REMETTRE À LA PROF
+// https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
