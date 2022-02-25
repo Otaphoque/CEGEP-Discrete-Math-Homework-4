@@ -25,7 +25,7 @@ public class Question3 {
     public int AddBinaries(String num1, String num2) {
 
         String big, small;
-        int result, SumInt, indexOfSmall;
+        int result;
         String SumString = "";
         int retenue = 0;
 
@@ -53,7 +53,6 @@ public class Question3 {
                 SumString = retenue + SumString;
             }
         }
-        SumInt = Integer.parseInt(SumString);
-        return SumInt;      // Returns the converted (from String to Int) value
+        return Integer.parseInt(SumString);
     }
 }
