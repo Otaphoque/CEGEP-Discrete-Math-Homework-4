@@ -22,11 +22,11 @@ public class Question3 {
      *
      */
 
-    public int AddBinaries(String num1, String num2) {
+    public String AddBinaries(String num1, String num2) {
 
         String big, small;
         int result;
-        String SumString = "";
+        String Sum = "";
         int retenue = 0;
 
         if (num1.length() < num2.length()) {            // This portion of the code assigns the longest String to the String "big"
@@ -48,11 +48,11 @@ public class Question3 {
                 result = 0;
                 retenue = 1;
             }
-            SumString = Integer.toString(result) + SumString;       // Adds the result value in front of the previous result(s)
+            Sum = Integer.toString(result) + Sum;       // Adds the result value in front of the previous result(s)
             if ((i == 0) && (retenue ==1)) {        // Activates if there is a retenue on the final operation
-                SumString = retenue + SumString;
+                Sum = retenue + Sum;
             }
         }
-        return Integer.parseInt(SumString);
+        return Sum;
     }
 }
