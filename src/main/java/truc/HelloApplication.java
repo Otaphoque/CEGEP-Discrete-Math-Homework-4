@@ -3,7 +3,7 @@ package truc;
 import java.io.IOException;
 
 public class HelloApplication {
-    
+
     public static void main(String[] args) {
         Question1 question1 = new Question1();
         Question2 question2 = new Question2();

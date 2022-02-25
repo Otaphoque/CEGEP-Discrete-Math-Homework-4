@@ -37,10 +37,8 @@ public class Question3 {
             small = num2;
         }
 
-        if (big.length() != small.length()) {                                   // This portion of the code adds leading zeros in front
-            for (int i = 0; i<=big.length() - small.length(); i++) {                // of the smallest number if needed so that
-                small = "0" + small;                                                // there is no IndexOutOfBonds Exception later on
-            }
+        while (big.length() != small.length()) {                                   // This portion of the code adds leading zeros in front
+            small = "0" + small;                                                // there is no IndexOutOfBonds Exception later on
         }
 
         for (int i = big.length()-1; i>=0; i--) {
