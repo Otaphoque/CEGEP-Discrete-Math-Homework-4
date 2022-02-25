@@ -37,9 +37,9 @@ public class Question3 {
             small = num2;
         }
 
-        while (big.length() != small.length()) {                                    // This portion of the code adds leading zeros in front
-            small = "0" + small;                                                        // of the small number so that
-        }                                                                               // there is no IndexOutOfBonds Exception later on
+        while (big.length() != small.length()) {        // This portion of the code adds leading zeros in front
+            small = "0" + small;                            // of the small number so that
+        }                                                   // there is no IndexOutOfBonds Exception later on
 
         for (int i = big.length()-1; i>=0; i--) {
             result = Character.getNumericValue(big.charAt(i)) + Character.getNumericValue(small.charAt(i)) + retenue;   // Does the basic operation of adding everything
@@ -57,9 +57,3 @@ public class Question3 {
         return SumInt;      // Returns the converted (from String to Int) value
     }
 }
-
-// System.out.println("big : " + big);
-// System.out.println("small : " + small);
-
-// System.out.println("Result : " + result);
-// System.out.println("SumString : " + SumString + "\n");
