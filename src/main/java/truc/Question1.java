@@ -12,6 +12,3 @@ public class Question1 {
         return EuclidGCD(number2 % number1, number1);
     }
 }
-
-// À ENLEVER AVANT DE REMETTRE À LA PROF
-// https://www.geeksforgeeks.org/euclidean-algorithms-basic-and-extended/
