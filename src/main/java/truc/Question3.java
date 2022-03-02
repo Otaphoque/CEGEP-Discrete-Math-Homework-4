@@ -10,16 +10,27 @@ public class Question3 {
      * int carryOver = 0
      * String SumString
      * int SumInt
+     * String big, small
      *
-     * for each of the character of the longest string, i decreases -1
-     *      add the characters at index i AND the carryOver
-     *      if the result is 2
+     * if num1 is the longest String
+     *      assign num1 to big
+     *      assign num2 to small
+     * if num2 is the longest String
+     *      assign num2 to big
+     *      assign num1 to small
+     *
+     *  while small has fewer characters (its length is smaller) than big,
+     *      add zeros in front of it so they small and big are the same length
+     *
+     * for each of the character of big, i decreases of 1 each loop
+     *      add the characters at index i AND the carryOver and assign it to result
+     *      reset the carryOver to 0
+     *      if result is 2
      *          add 1 to the carryOver
-     *      if the result is 1 OR 0
-     *          add the result to SumString (Sumstring = result + SumString)
-     * convert to Int and store SumString to SumInt
-     * return SumInt
-     *
+     *      if result is 3
+     *          add 1 to carryOver and 1 to result
+     *      add (concat) result to SumString (Sum = result + Sum)
+     * return Sum
      */
 
     public String AddBinaries(String num1, String num2) {
@@ -46,6 +57,9 @@ public class Question3 {
             retenue = 0;
             if (result == 2) {      // Activates the retenue process if there is one
                 result = 0;
+                retenue = 1;
+            } else if (result == 3) {
+                result = 1;
                 retenue = 1;
             }
             Sum = Integer.toString(result) + Sum;       // Adds the result value in front of the previous result(s)
