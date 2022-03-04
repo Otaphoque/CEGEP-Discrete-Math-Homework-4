@@ -31,7 +31,7 @@ public class Question32 {
 
             result = this.add(c1, c2);                              // Calculates the result between the two char
             result = this.add((char) carryOver, (char) result);     // Adds the carryOver
-            carryOver = this.calculateCarryOver(c1, c2);            // Calculates the carryOver
+            carryOver = this.calculateCarryOver(c1, c2);            // Calculates the carryOver for next round
 
             Sum = Integer.toString(result) + Sum;       // Adds the result value in front of the previous result(s)
             if ((i == 0) && (retenue ==1)) {        // Activates if there is a retenue on the final operation
