@@ -24,13 +24,14 @@ public class Question32 {
             small = "0" + small;                            // of the small number so that
         }                                                   // there is no IndexOutOfBonds Exception later on
 
+        int carryOver = 0;
         for (int i = big.length()-1; i>=0; i--) {       // For every character in big
             char c1 = big.charAt(i);
             char c2 = small.charAt(i);
 
-            int carryOver = this.calculateCarryOver(c1, c2);        // Calculates the carryOver
             result = this.add(c1, c2);                              // Calculates the result between the two char
             result = this.add((char) carryOver, (char) result);     // Adds the carryOver
+            carryOver = this.calculateCarryOver(c1, c2);            // Calculates the carryOver
 
             Sum = Integer.toString(result) + Sum;       // Adds the result value in front of the previous result(s)
             if ((i == 0) && (retenue ==1)) {        // Activates if there is a retenue on the final operation
