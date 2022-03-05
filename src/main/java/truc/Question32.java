@@ -61,11 +61,11 @@ public class Question32 {
         if ((c1 == 0) && (c2 == 0)) {
             carryOver = 0;
         } else if ((c1 == 0) && (c2 == 1)) {
-            carryOver = 1;
-        } else if ((c1 == 1) && (c2 == 0)) {
-            carryOver = 1;
-        } else if ((c1 == 1) && (c2 == 1)) {
             carryOver = 0;
+        } else if ((c1 == 1) && (c2 == 0)) {
+            carryOver = 0;
+        } else if ((c1 == 1) && (c2 == 1)) {
+            carryOver = 1;
         }
         return carryOver;
     }
