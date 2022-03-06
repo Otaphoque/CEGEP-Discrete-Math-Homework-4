@@ -5,7 +5,7 @@ public class Question2 {
     public Question2() {}
 
     /***
-     * PSEUDO CODE FOR QUESTION 3 :
+     * PSEUDO CODE FOR QUESTION 2 :
      *
      * int base1
      * int number
