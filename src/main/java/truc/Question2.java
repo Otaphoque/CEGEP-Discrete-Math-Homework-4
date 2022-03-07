@@ -13,20 +13,20 @@ public class Question2 {
     // Function to convert number from base1 to base2 another base
     static String TransformBase(int base1, String number, int base2)
     {
-        System.out.println(number + " ORIGINAL NUMBER");
+        System.out.println(number);
 
         int num = toDecimalForm(number, base1);
-        System.out.println(num + " DECIMAL NUMBER(BASE 10)");
+        System.out.println(num);
 
         String ans = deciToFinalBase(base2, num);
-        System.out.println(ans + " NUMBER TRANSFORMED INTO FINAL BASE");
+        System.out.println(ans);
 
         System.out.print(ans);
 
         return ans;
     }
 
-    // evaluating value of a character
+    // getting the value of a letter for base16
     static int val(char c)
     {
         if (c >= '0' && c <= '9'){
@@ -37,7 +37,7 @@ public class Question2 {
         }
     }
 
-    // Function to convert a number from base1 to decimal number
+    // Function to convert a number from original base to decimal number
     static int toDecimalForm(String str, int baseOrigin)
     {
         int len = str.length();
@@ -50,22 +50,13 @@ public class Question2 {
                 System.out.printf("Invalid Number");
                 return -1;
             }
-            // Update num
             num = num + val(str.charAt(i)) * power;
-
-            // Update power
-            //System.out.println(power + "powerB"+ "  multip     "+ baseOrigin + "base ORIGIN");
-
-
             power = power * baseOrigin;
-
-
-            //   System.out.println(power + "powerB");
         }
         return num;
     }
 
-    // Function to return equivalent character of a given value
+    // Function to give the letter equivalent to a given value for base16
     static char equivCharVal(int num)
     {
         if (num >= 0 && num <= 9)
@@ -78,23 +69,15 @@ public class Question2 {
     static String deciToFinalBase(int base2, int Number)
     {
         // Store the result
-        String res = "";
-
-        // Repeatedly divide Number
-        // by base2 and take remainder
+        String answer = "";
         while (Number > 0)
         {
-            // Update res
-            res = (res + equivCharVal(Number % base2));
+            answer = (answer + equivCharVal(Number % base2));
 
-            // Update Number
             Number /= base2;
         }
-
-        // Reverse the result
-        res = invert(res);
-
-        return res;
+        answer = invert(answer);
+        return answer;
     }
 
     static String invert(String input) {
