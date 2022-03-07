@@ -13,7 +13,7 @@ public class HelloApplication {
         int q1 = question1.EuclidGCD2(3, 24);
         System.out.println("Euclid says the Greatest Common Divisor between 3 and 24 is : " + q1 + "\n");
 
-        String q2 = question2.TransformBase(7, 14261, 16);
+        String q2 = question2.TransformBase(7, "14261", 16);
         System.out.println("The number 14261 in base 7 is equal to " + q2 + " in base 16\n");
 
         String q31 = question3.AddBinaries("1110111", "111100");
